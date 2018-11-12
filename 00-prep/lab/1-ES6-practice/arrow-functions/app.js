@@ -2,7 +2,7 @@
 
 // STEP 1
 // This is a standard function expression. You may also be familiar with function declarations, which begin with the "function" keyword.
-const theOldWay = function(course) {
+const theOldWay = function (course) {
   return `I am currently enrolled in ${course}`;
 };
 
@@ -44,7 +44,7 @@ console.log('As a one-liner:', oneLiner('Code 301'));
 // STEP 5
 // What if we have multiple parameters?
 // In a function expression, they all go in the parentheses
-const add = function(num1, num2) {
+const add = function (num1, num2) {
   return `${num1} + ${num2} = ${num1 + num2}`;
 };
 
@@ -76,7 +76,7 @@ console.log('Multi-line arrow function:', multiLiner('hello'));
 // STEP 8
 // The way an object is returned is different with an arrow function, too.
 // Here is how we return an object without arrow functions
-const oldObject = function(array) {
+const oldObject = function (array) {
   return {
     firstValue: array[0],
     secondValue: array[1],
@@ -108,27 +108,23 @@ console.log('Hello from the new object function', newObject(['hi', 'hello', 'are
 
 
 
-let sum = function(a, b, c, d) {
-  return a + b + c + d;
-};
+let sum = (a, b, c, d) => (a + b + c + d);
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(sum(1, 2, 3, 4));
+console.log(sum(1, 2, 3, 4));
 
 
-let objectLit = function() {
-  return {
-    key1: 'value1',
-    key2: 'value2',
-    key3: 'value3',
-  };
-};
+let objectLit = () => ({
+  key1: 'value1',
+  key2: 'value2',
+  key3: 'value3'
+});
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(objectLit());
+console.log(objectLit());
 
 
-let sumAndProduct = function(a, b) {
+let sumAndProduct = function (a, b) {
   let sum = a + b;
   let product = a * b;
   return [sum, product];
@@ -138,7 +134,7 @@ let sumAndProduct = function(a, b) {
 // console.log(sumAndProduct(3, 9));
 
 
-let message = function(name) {
+let message = function (name) {
   return `Hello, ${name}!`;
 };
 
@@ -146,7 +142,7 @@ let message = function(name) {
 // console.log(message('Allie'));
 
 
-let Student = function(name, age, hometown) {
+let Student = function (name, age, hometown) {
   this.name = name;
   this.age = age;
   this.hometown = hometown;
@@ -159,7 +155,7 @@ let joe = new Student('Joe', 'Schmoe', 100);
 // console.log(joe);
 
 
-Student.prototype.greeting = function() {
+Student.prototype.greeting = function () {
   return `Hi, my name is ${this.name}`;
 };
 
@@ -168,7 +164,7 @@ Student.prototype.greeting = function() {
 // console.log(joe.greeting());
 
 
-Student.courseName = function() {
+Student.courseName = function () {
   return 'This student is enrolled in Code 301.';
 };
 
@@ -179,7 +175,7 @@ Student.courseName = function() {
 
 // STEP 11
 // How do arrow functions affect constructor functions?
-Student.prototype.scope = function() {
+Student.prototype.scope = function () {
   console.log(this);
 };
 
