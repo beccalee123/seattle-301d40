@@ -124,29 +124,23 @@ let objectLit = () => ({
 console.log(objectLit());
 
 
-let sumAndProduct = function (a, b) {
+let sumAndProduct = (a, b) => {
   let sum = a + b;
   let product = a * b;
   return [sum, product];
 };
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(sumAndProduct(3, 9));
+console.log(sumAndProduct(3, 9));
 
 
-let message = function (name) {
-  return `Hello, ${name}!`;
-};
+let message = (name) => `Hello, ${name}!`;
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(message('Allie'));
+console.log(message('Allie'));
 
 
-<<<<<<< HEAD
 let Student = function (name, age, hometown) {
-=======
-let Student = (name, age, hometown) => {
->>>>>>> f5febb96838c5172c50c8d4bb7f094c0a475d46e
   this.name = name;
   this.age = age;
   this.hometown = hometown;
@@ -165,15 +159,13 @@ Student.prototype.greeting = function () {
 
 // TODO: Uncomment the following line of code to see the output in the browser console
 // Note that the arrow function will cause this method to break!
-// console.log(joe.greeting());
+console.log(joe.greeting());
 
 
-Student.courseName = function () {
-  return 'This student is enrolled in Code 301.';
-};
+Student.courseName = () => 'This student is enrolled in Code 301.';
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(Student.courseName());
+console.log(Student.courseName());
 
 
 
@@ -183,18 +175,22 @@ Student.prototype.scope = function () {
   console.log(this);
 };
 
+//Arrow functions don't work for constructor functions because they don't create their own context. 
+
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(joe.scope());
+console.log(joe.scope());
 
 Student.prototype.scopeArrow = () => console.log(this);
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(joe.scopeArrow());
+console.log(joe.scopeArrow());
 
 // TODO: Write a COMMENT below to answer the following questions.
 // 1. What is "this" when joe.scope() is invoked?
+// When joe.scope() is invoked, "this" refers to the new Joe instance of the student constructor function
 // 
 // 2. What is "this" when joe.scopeArrow() is invoked?
+// When joe.scopeArrow() is invoked, "this" refers us up to line 181 (console.log(joe.scope());), which produced a console.log that tells us "this" is part of the window.
 //
 // 3. Explain why "this" is different when an arrow function is used.
-// 
+// When an arrow function is used, it refers to its parent element. In this case, it doesn't have a specific one, so it refers to window.
