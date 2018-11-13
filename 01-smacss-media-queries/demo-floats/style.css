@@ -1,17 +1,30 @@
 div {
   border: 3px solid red;
   height: 200px;
+<<<<<<< HEAD
   width: 400px;
+=======
+  width: 300px;
+>>>>>>> f5febb96838c5172c50c8d4bb7f094c0a475d46e
   margin: 20px;
   float: left;
   background: black;
 }
 
+<<<<<<< HEAD
 /* below is a media query */
 /* screen is the media type */
 @media screen and (min-width: 800px) {
+=======
+@media screen and (min-width: 800px) {
+
+>>>>>>> f5febb96838c5172c50c8d4bb7f094c0a475d46e
   div {
     border: 5px dashed blue;
     background: gray;
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> f5febb96838c5172c50c8d4bb7f094c0a475d46e
 }
