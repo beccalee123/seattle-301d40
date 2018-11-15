@@ -11,8 +11,12 @@ function Neighborhood (rawDataObject) {
 
 Neighborhood.prototype.toHtml = function() {
   // 1. Get the template from the HTML document
+  const source = $('#neighborhood-template').html();
   // 2. Use Handlebars to "compile" the HTML
+  const template = Handlebars.compile(source);
+  console.log(template);
   // 3. Do not forget to return the HTML from this method
+  return template(this);
 };
 
 neighborhoodDataSet.forEach(neighborhoodObject => {

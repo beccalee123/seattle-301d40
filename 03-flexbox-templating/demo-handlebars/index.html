@@ -8,7 +8,13 @@
 
     <script id="neighborhood-template" type="text/x-handlebars-template">
       <div>
-        <!-- What needs to go in here? -->
+        <h2>{{name}}</h2>
+        <ul>
+          <li>{{city}}</li>
+          <li>{{population}}</li>
+          <li>{{founded}}</li>
+        </ul>
+        {{{body}}} <!-- this escapes the HTML and also renders all of them -->
       </div>
     </script>
 
